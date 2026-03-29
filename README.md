@@ -15,3 +15,34 @@ Esta aplicación resuelve:
 
 - Descontrol presupuestario:
 	Permite comparar el presupuesto asignado frente al gasto en tiempo real.
+
+
+Nota para la evaluación:
+Los entregables de cada asignatura se podrán encontrar en las siguientes carpetas del proyecto:
+
+
+    Bases de Datos: 
+
+        Carpeta /diagrams: diseño (Diagrama E/R) y modelo relacional .
+
+        Carpeta /sql: los distintos scripts SQL de creación, inserción de datos y consultas .
+
+
+    Programación y MPO: 
+
+        Carpeta /src: código fuente Java de la aplicación, organizado por paquetes.
+
+
+    Lenguajes de Marcas:
+
+        Carpeta /xml: archivo de datos (.xml), esquema de validación (.xsd) y evidencias de validación del sistema.
+
+
+    Sistemas Informáticos:
+
+        Carpeta /docs/sistemas: informe técnico del entorno de ejecución, requisitos de hardware y manual de instalación .
+
+
+    Itinerario Personal para la Empleabilidad I:
+
+        Carpeta /docs/empleabilidad: perfil profesional, investigación del sector, presentación del proyecto y el portfolio básico .
