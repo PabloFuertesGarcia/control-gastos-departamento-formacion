@@ -1,48 +1,48 @@
-Gestor de gastos - Departamento de formaciÛn
+Gestor de gastos - Departamento de formaci√≥n
 
-DescripciÛn del proyecto:
+Descripci√≥n del proyecto:
 
-Este proyecto consiste en el desarrollo de una aplicaciÛn multiplataforma, para la gestiÛn y control financiero de un departamento de formaciÛn de una empresa.
-El sistema permitir· centralizar la gestiÛn de costes asociados a los distintos programas, clases, proveedores y ponentes, facilitando el control de honorarios, presupuestos y facturas.
-Va destinada a profesionales de Recursos Humanos, tanto de mayor responsabilidad (encargados del control presupuestario) como de menor nivel (frecuentemente encargados de la inserciÛn de datos/registro de los gastos y tramitaciÛn de facturas).
+Este proyecto consiste en el desarrollo de una aplicaci√≥n multiplataforma, para la gesti√≥n y control financiero de un departamento de formaci√≥n de una empresa.
+El sistema permitir√° centralizar la gesti√≥n de costes asociados a los distintos programas, clases, proveedores y ponentes, facilitando el control de honorarios, presupuestos y facturas.
+Va destinada a profesionales de Recursos Humanos, tanto de mayor responsabilidad (encargados del control presupuestario) como de menor nivel (frecuentemente encargados de la inserci√≥n de datos/registro de los gastos y tramitaci√≥n de facturas).
 
-Actualmente, la gestiÛn de costes en formaciÛn suele ser fragmentada, con varias personas involucradas que llevan programas y gastos distintos y numerosos, por lo que se requiere un seguimiento muy efectivo.
-Esta aplicaciÛn resuelve:
+Actualmente, la gesti√≥n de costes en formaci√≥n suele ser fragmentada, con varias personas involucradas que llevan programas y gastos distintos y numerosos, por lo que se requiere un seguimiento muy efectivo.
+Esta aplicaci√≥n resuelve:
 
-- FragmentaciÛn/integridad de datos:
-	Centraliza proveedores, cursos y facturas en una base de datos relacional, m·s robusta que otras herramientas frecuentes como archivos Excel.
-	Adem·s, asegura la normalidad de los datos insertados y establece una metodologÌa de gestiÛn m·s clara.
+- Fragmentaci√≥n/integridad de datos:
+	Centraliza proveedores, cursos y facturas en una base de datos relacional, m√°s robusta que otras herramientas frecuentes como archivos Excel.
+	Adem√°s, asegura la normalidad de los datos insertados y establece una metodolog√≠a de gesti√≥n m√°s clara.
 
 - Descontrol presupuestario:
 	Permite comparar el presupuesto asignado frente al gasto en tiempo real.
 
 
-Nota para la evaluaciÛn:
-Los entregables de cada asignatura se podr·n encontrar en las siguientes carpetas del proyecto:
+Nota para la evaluaci√≥n:
+Los entregables de cada asignatura se podr√°n encontrar en las siguientes carpetas del proyecto:
 
 
     Bases de Datos: 
 
-        Carpeta /diagrams: diseÒo (Diagrama E/R) y modelo relacional .
+        Carpeta /diagrams: dise√±o (Diagrama E/R), modelo relacional y README explicando el dise√±o.
 
-        Carpeta /sql: los distintos scripts SQL de creaciÛn, inserciÛn de datos y consultas .
+        Carpeta /sql: los distintos scripts SQL de creaci√≥n, inserci√≥n de datos y consultas .
 
 
-    ProgramaciÛn y MPO: 
+    Programaci√≥n y MPO: 
 
-        Carpeta /src: cÛdigo fuente Java de la aplicaciÛn, organizado por paquetes.
+        Carpeta /src: c√≥digo fuente Java de la aplicaci√≥n, organizado por paquetes.
 
 
     Lenguajes de Marcas:
 
-        Carpeta /xml: archivo de datos (.xml), esquema de validaciÛn (.xsd) y evidencias de validaciÛn del sistema.
+        Carpeta /xml: archivo de datos (.xml), esquema de validaci√≥n (.xsd) y evidencias de validaci√≥n del sistema.
 
 
-    Sistemas Inform·ticos:
+    Sistemas Inform√°ticos:
 
-        Carpeta /docs/sistemas: informe tÈcnico del entorno de ejecuciÛn, requisitos de hardware y manual de instalaciÛn .
+        Carpeta /docs/sistemas: informe t√©cnico del entorno de ejecuci√≥n, requisitos de hardware y manual de instalaci√≥n .
 
 
     Itinerario Personal para la Empleabilidad I:
 
-        Carpeta /docs/empleabilidad: perfil profesional, investigaciÛn del sector, presentaciÛn del proyecto y el portfolio b·sico .
+        Carpeta /docs/empleabilidad: perfil profesional, investigaci√≥n del sector, presentaci√≥n del proyecto y el portfolio b√°sico .
