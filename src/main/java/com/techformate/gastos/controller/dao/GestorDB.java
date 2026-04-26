@@ -1,9 +1,12 @@
-package com.techformate.gastos.controller;
+package com.techformate.gastos.controller.dao;
+
+import lombok.Getter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+@Getter
 public class GestorDB {
 
     private Connection connection;
@@ -31,4 +34,9 @@ public class GestorDB {
     public void llamarConexion(){
         System.out.println(connection.toString());
     };
+
+    public boolean conexionAbierta() throws SQLException {
+        return (!connection.isClosed());
+    }
+
 }

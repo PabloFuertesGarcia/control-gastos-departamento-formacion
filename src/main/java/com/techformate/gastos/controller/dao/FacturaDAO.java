@@ -1,4 +1,4 @@
-package com.techformate.gastos.model.dao;
+package com.techformate.gastos.controller.dao;
 
 public class FacturaDAO {
 }

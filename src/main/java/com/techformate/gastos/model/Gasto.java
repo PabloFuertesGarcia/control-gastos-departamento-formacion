@@ -1,4 +1,4 @@
-package model;
+package com.techformate.gastos.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Gasto {
+public class Gasto implements RegistroFinanciero{
     private Integer id;
     private Integer idUsuario;
 
@@ -17,9 +17,29 @@ public class Gasto {
     private Integer idAccionForm;
     private Integer idSociedadInterna;
 
-    private BigDecimal importe;
+    private BigDecimal importeGasto;
     private String tipoGasto;
     private String conceptoGasto;
 
     private String estado;
+
+    @Override
+    public String getConceptoVisual() {
+        return "";
+    }
+
+    @Override
+    public BigDecimal getImporte() {
+        return null;
+    }
+
+    @Override
+    public BigDecimal getAsignadosaEste() {
+        return null;
+    }
+
+    @Override
+    public BigDecimal getRestante() {
+        return RegistroFinanciero.super.getRestante();
+    }
 }

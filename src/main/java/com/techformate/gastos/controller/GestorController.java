@@ -1,7 +1,7 @@
-package controller;
+package com.techformate.gastos.controller;
 
-import model.Sociedad;
-import model.Usuario;
+import com.techformate.gastos.model.Sociedad;
+import com.techformate.gastos.model.Usuario;
 
 import java.util.Map;
 

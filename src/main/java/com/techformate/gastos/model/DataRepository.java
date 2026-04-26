@@ -12,7 +12,10 @@ public class DataRepository {
     public static Map<Integer, Sociedad> tablaSociedades = new HashMap<>();
     public static Map<Integer, Partida> tablaPartidas = new HashMap<>();
     public static Map<Integer, Gasto> tablaGastos = new HashMap<>();
+    public static Map<Integer, Factura> tablafacturas = new HashMap<>();
     public static List<Imputacion> tablaImputaciones = new ArrayList<>();
+    public static Map<Integer, AccionForm> tablaAcciones = new HashMap<>();
+
 
     // Este método lo llamaremos UNA SOLA VEZ al arrancar
     public static void cargarDatosFicticios() {
@@ -20,7 +23,9 @@ public class DataRepository {
         tablaUsuarios.put(2, new Usuario(2, "elena.martin@innovatech.es", "Elena"));
 
         tablaSociedades.put(1, new Sociedad(1, "Interna", "TechFormate S.L.", "B11223344"));
-        tablaSociedades.put(3, new Sociedad(3, "Proveedor", "AWS EMEA", "N0000000A"));
+        tablaSociedades.put(2, new Sociedad(2, "Proveedor", "AWS EMEA", "N0000000A"));
+
+        tablaAcciones.put(1, new AccionForm(1, "Liderazgo","Leadership Program"));
 
         tablaPartidas.put(1, new Partida(1, 1, new BigDecimal("4500.00"), "Formación técnica", "Microservicios Java"));
 
@@ -28,6 +33,7 @@ public class DataRepository {
 
         tablaImputaciones.add(new Imputacion(1, 1, new BigDecimal("1200.00")));
 
-        System.out.println("✅ Datos ficticios cargados en memoria.");
+        System.out.println("Datos ficticios cargados en memoria.");
     }
+
 }

@@ -1,9 +1,10 @@
-package model;
+package com.techformate.gastos.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -15,6 +16,6 @@ public class Factura {
     private Integer idSociedadProveedor;
     private Integer idSociedadInterna;
     private String numFactura;
-    private Date fechaEmision;
+    private LocalDate fechaEmision;
     private BigDecimal importe;
 }
