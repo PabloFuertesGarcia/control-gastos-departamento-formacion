@@ -74,16 +74,16 @@ public class GastoDAO {
                         "importe = ?," +
                         "tipo_coste = ?," +
                         "concepto_gasto = ?" +
-                        "WHERE id_gasto = ?";
+                        " WHERE id_gasto = ?";
 
                 PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
                 pStatement.setInt(1, gasto.getIdPartida());
                 pStatement.setInt(2, gasto.getIdAccionForm());
                 pStatement.setInt(3, gasto.getIdUsuario());
                 pStatement.setBigDecimal(4, gasto.getImporte());
-                pStatement.setString(3, gasto.getTipoGasto());
-                pStatement.setString(4, gasto.getConceptoGasto());
-                pStatement.setInt(5, id);
+                pStatement.setString(5, gasto.getTipoGasto());
+                pStatement.setString(6, gasto.getConceptoGasto());
+                pStatement.setInt(7, id);
 
                 pStatement.executeUpdate();
 
@@ -94,7 +94,6 @@ public class GastoDAO {
             e.printStackTrace();
         }
     }
-
 
     public void realizarBorradoGasto(Integer id) {
         GestorDB gestorDB = new GestorDB();

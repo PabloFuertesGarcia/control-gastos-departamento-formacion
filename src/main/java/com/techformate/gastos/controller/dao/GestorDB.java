@@ -10,7 +10,6 @@ import java.sql.SQLException;
 public class GestorDB {
 
     private Connection connection;
-
     public GestorDB() {
         realizarConexion();
     }

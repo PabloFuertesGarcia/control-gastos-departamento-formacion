@@ -30,7 +30,7 @@ public class Gasto implements RegistroFinanciero{
 
     @Override
     public BigDecimal getImporte() {
-        return null;
+        return importeGasto;
     }
 
     @Override

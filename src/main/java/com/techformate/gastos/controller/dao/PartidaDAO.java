@@ -25,7 +25,6 @@ public class PartidaDAO {
 
                 pStatement.executeUpdate();
 
-                pStatement.getConnection().close();
                 pStatement.close();
             }
         } catch (SQLException e) {
@@ -50,7 +49,6 @@ public class PartidaDAO {
                         String tipoGasto = resultSet.getString("tipo_gasto");
                         String iniciativa = resultSet.getString("iniciativa");
                         System.out.printf("id: %d | id Soc Interna: %d | Importe: %f | Tipo gasto %s | Iniciativa: %s", id, idSociedadInterna, importe, tipoGasto, iniciativa);
-
                     }
                 }
             }
@@ -68,7 +66,7 @@ public class PartidaDAO {
                         "importe = ?," +
                         "tipo_gasto = ?," +
                         "iniciativa = ?" +
-                        "WHERE id_partida = ?";
+                        " WHERE id_partida = ?";
 
                 PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
                 pStatement.setInt(1, partida.getIdSociedadInterna());

@@ -1,4 +1,116 @@
 package com.techformate.gastos.controller.dao;
 
+import com.techformate.gastos.model.Factura;
+import com.techformate.gastos.model.Gasto;
+
+import java.math.BigDecimal;
+import java.sql.*;
+import java.time.LocalDate;
+
 public class FacturaDAO {
+
+    public Integer realizarInsercionFactura(Factura factura, Connection connection) {
+        try {
+            String query = "INSERT INTO facturas (id_sociedad_interna, id_sociedad_proveedor, num_factura, fecha_emision, importe) " +
+                    "VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement pStatement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+
+            pStatement.setInt(1, factura.getIdSociedadInterna());
+            pStatement.setInt(2, factura.getIdSociedadProveedor());
+            pStatement.setString(3, factura.getNumFactura());
+            pStatement.setDate(4, Date.valueOf(factura.getFechaEmision()));
+            pStatement.setBigDecimal(5, factura.getImporteTotal());
+
+            pStatement.executeUpdate();
+
+            ResultSet resultado = pStatement.getGeneratedKeys();
+            Integer idResultado = null;
+            if (resultado.next()) {
+                idResultado = resultado.getInt(1);
+            }
+            pStatement.close();
+            return idResultado;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public void realizarConsultaTodasFacturas() {
+        GestorDB gestorDB = new GestorDB();
+        try {
+            if (gestorDB.conexionAbierta()) {
+                String query = "SELECT * FROM facturas";
+                Statement statement = gestorDB.getConnection().createStatement();
+                ResultSet resultSet = statement.executeQuery(String.format(query));
+                System.out.println("ejecutado");
+                if (resultSet != null) {
+                    while (resultSet.next()) {
+                        System.out.println();
+                        Integer id = resultSet.getInt("id_factura");
+                        Integer idSociedadInterna = resultSet.getInt("id_sociedad_interna");
+                        Integer idSociedadProveedor = resultSet.getInt("id_sociedad_proveedor");
+                        String numFactura = resultSet.getString("num_factura");
+                        LocalDate fechaEmision = resultSet.getDate("fecha_emision").toLocalDate();
+                        BigDecimal importe = resultSet.getBigDecimal("importe");
+
+                        System.out.printf("id: %d | id sociedad interna: %d | id sociedad proveedor: %d | numFactura: %s | Fecha emision: %s | Importe: %f", id, idSociedadInterna, idSociedadProveedor, fechaEmision, numFactura, importe);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void realizarActualizacionFactura(Integer id, Factura factura) {
+        GestorDB gestorDB = new GestorDB();
+        try {
+
+            if (gestorDB.conexionAbierta()) {
+
+                String query = "UPDATE facturas " +
+                        "SET id_sociedad_interna = ?," +
+                        "id_sociedad_proveedor = ?," +
+                        "num_factura = ?," +
+                        "fecha_emision = ?," +
+                        "importe = ?,"+
+                        " WHERE id_factura = ?";
+
+                PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
+                pStatement.setInt(1, factura.getIdSociedadInterna());
+                pStatement.setInt(2, factura.getIdSociedadProveedor());
+                pStatement.setString(3, factura.getNumFactura());
+                pStatement.setDate(4, Date.valueOf(factura.getFechaEmision()));
+                pStatement.setBigDecimal(5, factura.getImporteTotal());
+                pStatement.setInt(6, id);
+
+                pStatement.executeUpdate();
+
+                pStatement.getConnection().close();
+                pStatement.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void realizarBorradoFactura(Integer id) {
+        GestorDB gestorDB = new GestorDB();
+        try {
+            if (gestorDB.conexionAbierta()) {
+                String query = "DELETE FROM facturas" +
+                        " WHERE id_factura = ?";
+                PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
+                pStatement.setInt(1, id);
+                pStatement.executeUpdate();
+                pStatement.getConnection().close();
+                pStatement.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
