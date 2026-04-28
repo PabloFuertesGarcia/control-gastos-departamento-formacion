@@ -1,8 +1,13 @@
 package com.techformate.gastos.controller;
 
+import com.techformate.gastos.controller.dao.GastoDAO;
+import com.techformate.gastos.controller.dao.PartidaDAO;
+import com.techformate.gastos.controller.dao.SociedadesDAO;
+import com.techformate.gastos.model.Partida;
 import com.techformate.gastos.model.Sociedad;
 import com.techformate.gastos.model.Usuario;
 
+import java.util.List;
 import java.util.Map;
 
 public class GestorController {
@@ -21,6 +26,21 @@ public class GestorController {
 
     public Map<Integer, Sociedad> getTablaSociedades() {
         return tablaSociedades;
+    }
+
+    public static List<Sociedad> obtenerTodasSociedades() {
+        SociedadesDAO sociedadesDAO = new SociedadesDAO();
+        return sociedadesDAO.realizarConsultaTodasSociedades();
+    }
+
+    public static List<Sociedad> obtenerSociedadesInternas() {
+        SociedadesDAO sociedadesDAO = new SociedadesDAO();
+        return sociedadesDAO.realizarConsultaSociedadesInternas();
+    }
+
+    public static List<Sociedad> obtenerSociedadesProveedores() {
+        SociedadesDAO sociedadesDAO = new SociedadesDAO();
+        return sociedadesDAO.realizarConsultaSociedadesProveedores();
     }
 
     public void crearUsuario(Usuario usuario){

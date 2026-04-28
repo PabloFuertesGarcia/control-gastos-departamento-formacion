@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PartidaDAO {
 
@@ -32,8 +34,9 @@ public class PartidaDAO {
         }
     }
 
-    public void realizarConsultaTodasPartidas() {
+    public List<Partida> realizarConsultaTodasPartidas() {
         GestorDB gestorDB = new GestorDB();
+        List<Partida>partidasSQL = new ArrayList<>();
         try {
             if (gestorDB.conexionAbierta()) {
                 String query = "SELECT * FROM partidas";
@@ -49,12 +52,15 @@ public class PartidaDAO {
                         String tipoGasto = resultSet.getString("tipo_gasto");
                         String iniciativa = resultSet.getString("iniciativa");
                         System.out.printf("id: %d | id Soc Interna: %d | Importe: %f | Tipo gasto %s | Iniciativa: %s", id, idSociedadInterna, importe, tipoGasto, iniciativa);
+                        Partida partidaIterada = new Partida(id,idSociedadInterna,importe,tipoGasto,iniciativa);
+                        partidasSQL.add(partidaIterada);
                     }
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return partidasSQL;
     }
 
     public void realizarActualizacionPartida(Integer id, Partida partida) {

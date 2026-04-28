@@ -14,6 +14,8 @@ public class Sociedad {
     private String nombreSociedad;
     private String cIF;
 
-
-
+    @Override
+    public String toString() {
+        return this.nombreSociedad;
+    }
 }

@@ -3,6 +3,7 @@ package com.techformate.gastos.view;
 import com.techformate.gastos.controller.ContabilidadController;
 import com.techformate.gastos.controller.PresupuestoController;
 import com.techformate.gastos.model.*;
+import javafx.application.Application;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -14,11 +15,13 @@ import java.util.Scanner;
 
 public class Launcher {
     public static void main(String[] args) {
+        Application.launch(HelloApplication.class, args);
+    }
 
-        //Application.launch(HelloApplication.class, args);
-
+    /*
         System.out.println("Bienvenido");
         DataRepository.cargarDatosFicticios();
+
         Scanner sc = new Scanner(System.in);
         int option = 0;
         while (!(option == 9)) {
@@ -270,5 +273,7 @@ public class Launcher {
         Factura facturaNueva = new Factura(null,idSociedadProveedor,idSociedadInterna,numFactura,fecha,importefactura);
         return facturaNueva;
     }
+
+     */
     
 }
