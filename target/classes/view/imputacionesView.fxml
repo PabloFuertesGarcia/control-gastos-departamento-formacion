@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techformate.gastos.controller.vistas.ImputacionesViewController">
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="150.0" spacing="15.0" style="-fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="MENU">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                    </VBox.margin>
+                </Label>
+
+                <VBox VBox.vgrow="ALWAYS" />
+
+                <Button fx:id="btnVolver" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Volver" textFill="#2f5da8">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="15.0" right="15.0" />
+            </padding>
+        </VBox>
+    </left>
+
+    <center>
+        <BorderPane prefHeight="370.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <bottom>
+                <HBox alignment="CENTER" prefHeight="72.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnAnadir" mnemonicParsing="false" text="Añadir" />
+                        <Button fx:id="btnEditar" mnemonicParsing="false" text="Editar" />
+                        <Button fx:id="btnBorrar" cancelButton="true" mnemonicParsing="false" text="Borrar" textFill="#ba2c2c" />
+                    </children>
+                </HBox>
+            </bottom>
+         <center>
+            <SplitPane dividerPositions="0.8016431924882629" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                            <TableView fx:id="imputaciones" prefHeight="216.0" prefWidth="451.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                    <TableColumn fx:id="colGastoAsociado" prefWidth="75.0" text="Gasto asociado" />
+                              <TableColumn fx:id="colImporte" prefWidth="75.0" text="Importe" />
+                                </columns>
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                </columnResizePolicy>
+                            </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="465.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="78.0" layoutY="-18.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="IMPORTE RESTANTE A IMPUTAR: " />
+                              <Label fx:id="lblimporteRestante" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+        </BorderPane>
+    </center>
+
+    <right>
+        <VBox fx:id="contenedorFormulario" alignment="CENTER" prefHeight="400.0" prefWidth="233.0" spacing="2.0" BorderPane.alignment="CENTER_LEFT">
+            <children>
+                <Label fx:id="tituloFormulario" text="EDITAR REGISTRO" textAlignment="CENTER" underline="true">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Este menú te permite asociar una misma factura a varios gastos distintos, repartiendo el importe correspondiente." textAlignment="JUSTIFY" wrappingWidth="200.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Text>
+            <Label text="Gasto asociado" />
+            <ComboBox fx:id="cmboGastoAsociado" prefHeight="27.0" prefWidth="212.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></ComboBox>
+                <Label text="Importe asociado" />
+                <TextField fx:id="fieldImporte">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                </TextField>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" text="GUARDAR" textFill="#3e803e" />
+                        <Button fx:id="btnCancelar" cancelButton="true" mnemonicParsing="false" text="CANCELAR" textFill="#a42f2f" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </right>
+   <top>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="78.0" layoutY="-18.0" prefHeight="82.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="FACTURA Nº " />
+                  <Label fx:id="NumFactura" text="0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

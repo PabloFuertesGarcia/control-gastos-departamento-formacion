@@ -1,45 +1,52 @@
 package com.techformate.gastos.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 
 public class Gasto implements RegistroFinanciero{
-    private Integer id;
-    private Integer idUsuario;
 
-    private Integer idPartida;
-    private Integer idAccionForm;
-    private Integer idSociedadInterna;
+    private Integer id, idUsuario, idPartida, idAccionForm, idSociedadInterna;
+    private String conceptoGasto, nombre, iniciativa, denominacionAccion, tipoCoste;
+    private BigDecimal importe;
+    private Estado estado;
 
-    private BigDecimal importeGasto;
-    private String tipoGasto;
-    private String conceptoGasto;
-
-    private String estado;
+    public Gasto(Integer id, Integer idPartida, Integer idAccionForm, Integer idUsuario, BigDecimal importe, String tipoCoste, String conceptoGasto, Estado estado, String iniciativa, String denominacionAccion, String nombre) {
+        this.id = id;
+        this.idPartida = idPartida;
+        this.idAccionForm = idAccionForm;
+        this.idUsuario = idUsuario;
+        this.importe = importe;
+        this.tipoCoste = tipoCoste;
+        this.conceptoGasto = conceptoGasto;
+        this.estado = estado;
+        this.iniciativa = iniciativa;
+        this.denominacionAccion = denominacionAccion;
+        this.nombre = nombre;
+    }
 
     @Override
     public String getConceptoVisual() {
-        return "";
+        return "Gasto: " + this.conceptoGasto;
     }
 
     @Override
     public BigDecimal getImporte() {
-        return importeGasto;
+        return importe;
     }
 
     @Override
-    public BigDecimal getAsignadosaEste() {
-        return null;
-    }
-
-    @Override
-    public BigDecimal getRestante() {
-        return RegistroFinanciero.super.getRestante();
+    public String toString() {
+        String denominacionValue = null;
+        if (denominacionAccion == null){
+            denominacionValue = "Sin AF";
+        }else denominacionValue = "AF: "+denominacionAccion;
+        return denominacionValue + " | "+
+                "Iniciativa: '" + iniciativa + " | "+
+                importe +" €"
+                ;
     }
 }

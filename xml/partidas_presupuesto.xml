@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<presupuesto_existente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="partidas_esquema.xsd">
+    <partida id="1" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="4500.00" tipoGasto="Formación técnica" iniciativa="Especialización en Microservicios con Java"/>
+    <partida id="2" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="3800.00" tipoGasto="Formación técnica" iniciativa="Desarrollo Frontend Avanzado"/>
+    <partida id="3" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="5000.00" tipoGasto="Formación de Partners" iniciativa="Gestion Microsoft Cloud"/>
+    <partida id="4" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="4200.00" tipoGasto="Formación de Partners" iniciativa="Acreditación Partner de Ciberseguridad"/>
+    <partida id="5" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="2500.00" tipoGasto="Certificaciones" iniciativa="Exámenes oficiales AWS Cloud Practitioner"/>
+    <partida id="6" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="2000.00" tipoGasto="Certificaciones" iniciativa="Certif Scrum Master PSM I"/>
+    <partida id="7" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="3000.00" tipoGasto="Formación técnica" iniciativa="Arquitectura de datos y SQL"/>
+    <partida id="8" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="2800.00" tipoGasto="Certificaciones" iniciativa="Certif en Ciberseguridad"/>
+    <partida id="9" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="6000.00" tipoGasto="Plataformas digitales" iniciativa="Suscripción Anual LinkedIn"/>
+    <partida id="10" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="4500.00" tipoGasto="Plataformas digitales" iniciativa="Licencias Plataforma de Idiomas IA"/>
+    <partida id="11" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="3000.00" tipoGasto="Idiomas" iniciativa="Clases de Inglés Técnico para Devs"/>
+    <partida id="12" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="2800.00" tipoGasto="Idiomas" iniciativa="Francés para Soporte al Cliente"/>
+    <partida id="13" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="3200.00" tipoGasto="Formación SoftSkills" iniciativa="Liderazgo y gestión de equipos - Agile"/>
+    <partida id="14" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="2500.00" tipoGasto="Formación SoftSkills" iniciativa="Comunicación y productividad"/>
+    <partida id="15" idSociedadInterna="2" nombreSociedadInterna="TechFormate Chore España S.A." importe="3000.00" tipoGasto="Plataformas digitales" iniciativa="Licencia Iseazy"/>
+    <partida id="16" idSociedadInterna="1" nombreSociedadInterna="TechFormate S.L." importe="2000.00" tipoGasto="Formación SoftSkills" iniciativa="Bienestar y Salud Laboral"/>
+</presupuesto_existente>

@@ -11,7 +11,12 @@ import lombok.NoArgsConstructor;
 public class AccionForm {
 
     private Integer id;
-    private String habilidad;
     private String denominacion;
+    private String habilidad;
+
+    @Override
+    public String toString() {
+        return denominacion;
+    }
 
 }

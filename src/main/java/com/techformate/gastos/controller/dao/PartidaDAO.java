@@ -63,6 +63,41 @@ public class PartidaDAO {
         return partidasSQL;
     }
 
+    public List<Partida> realizarConsultaTodasPartidasJoin() {
+        GestorDB gestorDB = new GestorDB();
+        List<Partida>partidasSQL = new ArrayList<>();
+        try {
+            if (gestorDB.conexionAbierta()) {
+                String query = "SELECT " +
+                        "sociedades.nombre_sociedad, " +
+                        "partidas.* " +
+                        "FROM sociedades " +
+                        "RIGHT JOIN partidas " +
+                        "ON sociedades.id_sociedad = partidas.id_sociedad_interna";
+
+                Statement statement = gestorDB.getConnection().createStatement();
+                ResultSet resultSet = statement.executeQuery(String.format(query));
+                System.out.println("ejecutado");
+                if (resultSet != null) {
+                    while (resultSet.next()) {
+                        System.out.println();
+                        Integer id = resultSet.getInt("id_partida");
+                        Integer idSociedadInterna = resultSet.getInt("id_sociedad_interna");
+                        String nombreSociedad = resultSet.getString("nombre_sociedad");
+                        BigDecimal importe = resultSet.getBigDecimal("importe");
+                        String tipoGasto = resultSet.getString("tipo_gasto");
+                        String iniciativa = resultSet.getString("iniciativa");
+                        Partida partidaIterada = new Partida(id,idSociedadInterna, nombreSociedad,importe,tipoGasto,iniciativa);
+                        partidasSQL.add(partidaIterada);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return partidasSQL;
+    }
+
     public void realizarActualizacionPartida(Integer id, Partida partida) {
         GestorDB gestorDB = new GestorDB();
         try {
@@ -92,23 +127,15 @@ public class PartidaDAO {
     }
 
 
-    public void realizarBorradoPartida(Integer id) {
+    public void realizarBorradoPartida(Integer id) throws SQLException {
         GestorDB gestorDB = new GestorDB();
-        try {
-            if (gestorDB.conexionAbierta()) {
-                String query = "DELETE FROM partidas" +
-                        " WHERE id_partida = ?";
-                PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
-
-                pStatement.setInt(1, id);
-
-                pStatement.executeUpdate();
-
-                pStatement.getConnection().close();
-                pStatement.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (gestorDB.conexionAbierta()) {
+            String query = "DELETE FROM partidas WHERE id_partida = ?";
+            PreparedStatement pStatement = gestorDB.getConnection().prepareStatement(query);
+            pStatement.setInt(1, id);
+            pStatement.executeUpdate();
+            pStatement.getConnection().close();
+            pStatement.close();
         }
     }
 }

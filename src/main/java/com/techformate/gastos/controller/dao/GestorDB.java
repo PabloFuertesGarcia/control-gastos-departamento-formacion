@@ -30,12 +30,11 @@ public class GestorDB {
         }
     }
 
-    public void llamarConexion(){
-        System.out.println(connection.toString());
-    };
-
     public boolean conexionAbierta() throws SQLException {
-        return (!connection.isClosed());
+        try {
+            return connection != null && !connection.isClosed();
+        } catch (SQLException e) {
+            return false;
+        }
     }
-
 }
