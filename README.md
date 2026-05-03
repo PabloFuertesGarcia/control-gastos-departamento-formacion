@@ -16,8 +16,37 @@ Esta aplicación resuelve:
 - Descontrol presupuestario:
 	Permite comparar el presupuesto asignado frente al gasto en tiempo real.
 
+---
+*Tecnologías Utilizadas*
 
-Nota para la evaluación:
+El proyecto se ha desarrollado bajo una arquitectura MVC (Modelo-Vista-Controlador) utilizando la siguiente tecnología:  
+
+    Lenguaje: Java 21.
+
+    Gestor de Dependencias: Maven (configurado en pom.xml).  
+
+    Interfaz Gráfica (UI): JavaFX.
+
+    Base de Datos: MySQL con enlace al código JAVA mediante JDBC.  
+
+    Exportación de datos: uso de XML y esquemas XSD para validación.  
+
+---
+*Instalación y Configuración*
+
+Para poner en marcha el proyecto en un entorno local:  
+
+    Base de Datos: Ejecutar los scripts SQL de creación de la BD y las tablas de la carpeta /sql/ directamente sobre el gestor de la BD (PHPmyAdmin con MySQL).  
+
+    Entorno: Es necesario disponer de JDK 21 y Maven instalados.  
+
+    Manual Detallado: Para instrucciones paso a paso sobre el entorno y la configuración, consultar el manual completo en:
+
+        *docs/sistemas/Informe Técnico de Entorno de Ejecución.pdf.*
+
+---
+*Nota para la evaluación:*
+
 Los entregables de cada asignatura se podrán encontrar en las siguientes carpetas del proyecto:
 
 
@@ -49,8 +78,7 @@ Los entregables de cada asignatura se podrán encontrar en las siguientes carpet
 
         Carpeta /docs/empleabilidad: perfil profesional, investigación del sector, presentación del proyecto y el portfolio básico .
 
----------------------------------------------------------------------------
----------------------------------------------------------------------------
+---
 
 - Módulo Programación -  
 
