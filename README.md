@@ -1,30 +1,23 @@
 # Gestor de gastos - Departamento de formación
 
-## Descripción del proyecto
+### Descripción del proyecto
 
 Este proyecto consiste en el desarrollo de una aplicación multiplataforma, para la gestión y control financiero de un departamento de formación de una empresa.
-El sistema permitirá centralizar la gestión de costes asociados a los distintos programas, iniciativas y proveedores, facilitando el control de:
+El sistema permitirá centralizar la gestión de costes asociados a los distintos programas, iniciativas y proveedores, facilitando el control de:* Gastos* Presupuestos* Facturas### Perfil de usuario
+La herramienta está diseñada para profesionales de Recursos Humanos:
 
-* Gastos
-* Presupuestos
-* Facturas
+**Responsables financieros:** Encargados del control presupuestario global.* 
 
-### Perfil de usuario
+**Perfiles administrativos:** Encargados de la inserción de datos, registro de gastos y tramitación de facturas.
 
-​La herramienta está diseñada para profesionales de Recursos Humanos:
-
-* ​**Responsables financieros:** Encargados del control presupuestario global.
-
-​* **Perfiles administrativos:** Encargados de la inserción de datos, registro de gastos y tramitación de facturas.
-
-## Pain encontrado y justificación de la solución
-
+### Pain encontrado y justificación de la solución
 Actualmente, la gestión de costes en formación suele ser fragmentada, con varias personas involucradas que llevan programas y gastos distintos y numerosos, por lo que se requiere un seguimiento muy efectivo.
 Esta aplicación resuelve:
 
 ### Fragmentación/integridad de datos:
 Centraliza proveedores, cursos y facturas en una base de datos relacional, más robusta que otras herramientas frecuentes como archivos Excel.
-	Además, asegura la normalidad de los datos insertados y establece una metodología de gestión más clara.
+
+Además, asegura la normalidad de los datos insertados y establece una metodología de gestión más clara.
 
 ### Descontrol presupuestario:
 Permite comparar el presupuesto asignado a gastos de forma totalmente trazable, evitando la perdida de datos y reforzando el control financiero.
@@ -34,70 +27,75 @@ Permite comparar el presupuesto asignado a gastos de forma totalmente trazable, 
 
 El proyecto se ha desarrollado bajo una arquitectura MVC (Modelo-Vista-Controlador) utilizando la siguiente tecnología:  
 
-### Lenguaje: Java 21.
-
-### Gestor de Dependencias: Maven (configurado en pom.xml).  
-
-### Interfaz Gráfica (UI): JavaFX.
-
-### Base de Datos: MySQL con enlace al código JAVA mediante JDBC.  
-
-### Exportación de datos: uso de XML y esquemas XSD para validación.  
+##### Lenguaje: Java 21.
+##### Gestor de Dependencias: Maven (configurado en pom.xml).  
+##### Interfaz Gráfica (UI): JavaFX.
+##### Base de Datos: MySQL con enlace al código JAVA mediante JDBC.  
+##### Exportación de datos: uso de XML y esquemas XSD para validación.  
 
 ---
-#Instalación y Configuración
+## Instalación y Configuración
 
 Para poner en marcha el proyecto en un entorno local:  
 
-## Base de Datos: Ejecutar los scripts SQL de creación de la BD y las tablas de la carpeta /sql/ directamente sobre el gestor de la BD (PHPmyAdmin con MySQL).  
+#### Clonar el repositorio:
+Copia el repositorio en el pc dedicado usando el siguiente comando:
 
-## Entorno: Es necesario disponer de JDK 21 y Maven instalados.  
+    git clone https://github.com/PabloFuertesGarcia/control-gastos-departamento-formacion
 
-### Manual Detallado: Para instrucciones paso a paso sobre el entorno y la configuración, consultar el manual completo en:
 
-        *docs/sistemas/Informe Técnico de Entorno de Ejecución.pdf.*
+#### Base de Datos: 
+Ejecutar los scripts SQL de creación de la BD y las tablas de la carpeta /sql/ directamente sobre el gestor de la BD (PHPmyAdmin con MySQL).  
+
+#### Entorno: 
+Es necesario disponer de JDK 21 y Maven instalados.  
+
+#### Manual Detallado: 
+Para instrucciones paso a paso sobre el entorno y la configuración, consultar el manual completo en:
+
+ *docs/sistemas/Informe Técnico de Entorno de Ejecución.pdf.*
 
 ---
-# Nota para la evaluación:
+### Nota para la evaluación:
 
 Los entregables de cada asignatura se podrán encontrar en las siguientes carpetas del proyecto:
 
 
-Bases de Datos: 
+#### Bases de Datos: 
 
-        Carpeta /diagrams: diseño (Diagrama E/R), modelo relacional y README explicando el diseño.
+Carpeta /diagrams: diseño (Diagrama E/R), modelo relacional y README explicando el diseño.
 
-        Carpeta /sql: los distintos scripts SQL de creación, inserción de datos y consultas .
-
-
-Programación y MPO: 
-
-        Carpeta /src: código fuente Java de la aplicación, organizado por paquetes.
-
-        README del proyecto - A continuación se puede ver cómo se ha estructurado y el funcionamiento del código, y las mejoras implementadas para el módulo de MPO (marcadas como "******** MEJORA MPO - ")
+Carpeta /sql: los distintos scripts SQL de creación, inserción de datos y consultas .
 
 
-Lenguajes de Marcas:
+#### Programación y MPO: 
 
-        Carpeta /xml: archivo de datos (.xml), esquema de validación (.xsd) y evidencias de validación del sistema.
+* Carpeta /src: código fuente Java de la aplicación, organizado por paquetes.
 
-
-Sistemas Informáticos:
-
-        Carpeta /docs/sistemas: informe técnico del entorno de ejecución, requisitos de hardware y manual de instalación .
+* README del proyecto - A continuación se puede ver cómo se ha estructurado y el funcionamiento del código, y las mejoras implementadas para el módulo de MPO (marcadas como "******** MEJORA MPO - ")
 
 
-Itinerario Personal para la Empleabilidad I:
+#### Lenguajes de Marcas:
 
-        Carpeta /docs/empleabilidad: perfil profesional, investigación del sector, presentación del proyecto y el portfolio básico .
+* Carpeta /xml: archivo de datos (.xml), esquema de validación (.xsd) y evidencias de validación del sistema.
+
+
+#### Sistemas Informáticos:
+
+* Carpeta /docs/sistemas: informe técnico del entorno de ejecución, requisitos de hardware y manual de instalación .
+
+
+#### Itinerario Personal para la Empleabilidad I:
+
+* Carpeta /docs/empleabilidad: perfil profesional, investigación del sector, presentación del proyecto y el portfolio básico.
 
 ---
 
-# Módulo Programación
+## Módulo Programación
 
-## FUNCIONALIDAD
+### Funcionalidad
 
-La plicación está diseñada para ser el motor financiero del departamento. Permite al usuario registrar el presupuesto inicial, y sobre él prever los gastos que va a tener en distintas formaciones y, finalmente, registrar las facturas reales cruzando los datos para saber exactamente en qué se ha consumido el dinero y evitar descuadres.
+La aplicación está diseñada para ser el motor financiero del departamento. Permite al usuario registrar el presupuesto inicial, y sobre él prever los gastos que va a tener en distintas formaciones y, finalmente, registrar las facturas reales cruzando los datos para saber exactamente en qué se ha consumido el dinero y evitar descuadres.
 
 Para iniciar la aplicación, primero se deben configurar las credenciales del usuario en la BD, la cual en el momento sólo puede hacerse mediante inserts directamente en un gestor como PHPmyAdmin. 
 
@@ -110,74 +108,81 @@ Al ejecutarse la aplicación (clase principal Launcher.java), el usuario inicia 
  Además, cuenta con funcionalidades avanzadas exportación de datos a XML (solo si es Admin) y un sistema de imputaciones que controla matemáticamente el saldo restante de las facturas.
 
 
-## ESTRUCTURA DEL CODIGO:
+### Estructura del código:
 
 Se ha separado la estructura del proyecto según las responsabilidades y los procesos mediante paquetes, siguiendo el patrón Model-View-Controller:
 
-##€    1. model: Clases modelo de los elementos. 
+####  1. model: Clases modelo de los elementos. 
 
-        Por un lado estan las entidades / objetos con la que se maneja la información: Partida, Factura, Gasto, Imputacion (del gasto a la Factura), AccionForm (Acción formativa), Sociedad y Usuario. Con la librería Lombok se han implementado métodos getter y setters.
+Por un lado estan las entidades / objetos con la que se maneja la información: Partida, Factura, Gasto, Imputacion (del gasto a la Factura), AccionForm (Acción formativa), Sociedad y Usuario. Con la librería Lombok se han implementado métodos getter y setters.
 
-        Además, están las clases de:
+Además, están las clases de:
 
-            -  Estado (enum de los distintos estados de un registro para facilitar la lógica - Comprometido, Consumido y Contabilizado).
+* Estado 
+Es un enum de los distintos estados de un registro para facilitar la lógica - Comprometido, Consumido y Contabilizado).
 
-            - ExportacionPartidas: Es un contenedor que actúa como el elemento raíz para transformar los objetos Partida desde Java a un archivo XML mediante JAXB, para que los datos se validen correctamente contra el esquema XSD.
+* ExportacionPartidas: 
+Es un contenedor que actúa como el elemento raíz para transformar los objetos Partida desde Java a un archivo XML mediante JAXB, para que los datos se validen correctamente contra el esquema XSD.
 
-******** MEJORA MPO - FUNCIONALIDAD EXTRA: clase Registro financiero::
-            Las entidades Partida, Factura, Gasto tienen una lógica de negocio parecida en su atributo más importante: el importe, el cual cuando es positivo significa que es un gasto, y cuando es negativo un ingreso.
-            Para evitar equivocaciones del usuario, se ha implementado un sistema de validación utilizando polimorfismo mediante esta interfaz, que obliga a implementar "getImporte()" para poder tratar los objetos de la misma manera, lo q ue ha permitido crear un único método centralizado en la clase ContabilidadController: "validarTipoImporte(RegistroFinanciero)", que evalúa dinámicamente si el dinero es positivo o negativo. Más adelante se detalla la lógica implementada en este método (sección controller).
+###### ******** MEJORA MPO - FUNCIONALIDAD EXTRA: clase Registro financiero:
 
-            
+Las entidades Partida, Factura, Gasto tienen una lógica de negocio parecida en su atributo más importante: el importe, el cual cuando es positivo significa que es un gasto, y cuando es negativo un ingreso.
+
+Para evitar equivocaciones del usuario, se ha implementado un sistema de validación utilizando polimorfismo mediante esta interfaz, que obliga a implementar "getImporte()" para poder tratar los objetos de la misma manera, lo q ue ha permitido crear un único método centralizado en la clase ContabilidadController: "validarTipoImporte(RegistroFinanciero)", que evalúa dinámicamente si el dinero es positivo o negativo. Más adelante se detalla la lógica implementada en este método (sección controller).
+
 ---
 
-###    2. view: Interfaz de usuario (archivos FXML).
+####   2. view: 
+Interfaz de usuario mediante archivos FXML.
 
 ---
 
-###    3. controller: dentro de este paquete, se ha subdividir aún más según la especialización dentro de la lógica de la aplicación:
+####    3. controller: 
+Dentro de este paquete, se ha decidido subdividir aún más según la especialización dentro de la lógica de la aplicación:
 
-####        controller.dao: 
+##### 3.1 controller.dao: 
 
-            Conexión a la base de datos (mySQL) y consultas SQL de cada entidad con su Tabla correspondiente en la Base de datos. Aquellas tablas que tienen claves foráneas cambian en la forma que tienen de acceder y devolver la aplicación, usando JOINs y así poder visualizar no los IDs, sino los nombres correctos de las entidades que aparezcan en la interfaz visual.
+Conexión a la base de datos (mySQL) y consultas SQL de cada entidad con su Tabla correspondiente en la Base de datos. Aquellas tablas que tienen claves foráneas cambian en la forma que tienen de acceder y devolver la aplicación, usando JOINs y así poder visualizar no los IDs, sino los nombres correctos de las entidades que aparezcan en la interfaz visual.
 
-####        controller.service - lógica de negocio:
+#### 3.2. controller.service - lógica de negocio:
 
-            3.1. PresupuestoController
-                Se encarga de todo lo relacionado con el presupuesto inicial asignado al departamento. Organiza las peticiones de la pantalla de partidas para que el DAO pueda guardar o leer la información correctamente.
+##### 3.2.1. PresupuestoController
+Se encarga de todo lo relacionado con el presupuesto inicial asignado al departamento. Organiza las peticiones de la pantalla de partidas para que el DAO pueda guardar o leer la información correctamente.
 
-                MODULO LENGUAJE DE MARCAS: EXPORTACIÓN XML: Aquí se gestiona la salida de datos hacia archivos externos usando la clase de exportación para convertir la lista de partidas de Java a un archivo XML, validando que el archivo final sea como pide el esquema de validación XSD.
+*MODULO LENGUAJE DE MARCAS: EXPORTACIÓN XML:*
+Aquí se gestiona la salida de datos hacia archivos externos usando la clase de exportación para convertir la lista de partidas de Java a un archivo XML, validando que el archivo final sea como pide el esquema de validación XSD.
                 
-                Es una funcionalidad que sólo pueden realizar los usuarios logeados que tengan rol de Admin (1), al igual que el poder borrar Partidas (se ocultan los botones correspondientes).
+Es una funcionalidad que sólo pueden realizar los usuarios logeados que tengan rol de Admin (1), al igual que el poder borrar Partidas (se ocultan los botones correspondientes).
 
- ####           3.2. ContabilidadController
-                Es el motor principal para los gastos del día a día y las facturas de los proveedores. Controla el registro y la modificación de gastos y facturas.
+##### 3.2.2. ContabilidadController
+Es el motor principal para los gastos del día a día y las facturas de los proveedores. Controla el registro y la modificación de gastos y facturas.
 
-********** MEJORA MPO - VALIDACIÓN DE IMPORTE: 
-                Gracias al uso de la interfaz Registro Financiero, este servicio tiene un método que puede revisar cualquier objeto de tipo financiero (Gasto, Factura o Partida) para ver si el importe es correcto. Las reglas de negocio aplicadas son:
+###### ********* MEJORA MPO - VALIDACIÓN DE IMPORTE: 
+Gracias al uso de la interfaz Registro Financiero, este servicio tiene un método que puede revisar cualquier objeto de tipo financiero (Gasto, Factura o Partida) para ver si el importe es correcto. Las reglas de negocio aplicadas son:
 
-                    En el módulo de Partidas (presupuesto), el sistema bloquea importes negativos, ya que una partida no puede ser menor que 0.
+En el módulo de Partidas (presupuesto), el sistema bloquea importes negativos, ya que una partida no puede ser menor que 0.
 
-                    En Facturas y Gastos, el sistema acepta el importe negativo, pero lanza un aviso al usuario de que el registro será tratado como un abono o devolución.
+En Facturas y Gastos, el sistema acepta el importe negativo, pero lanza un aviso al usuario de que el registro será tratado como un abono o devolución.
 
-********** MEJORA MPO - TRANSACCIONES CON ROLLBACK: 
-                En el proceso de imputar facturas, este controlador asegura si algo falla mientras se guardan los datos, el sistema hace un rollback para cancelar todo y que la base de datos quede con errores o dinero mal imputado o pendiente de imputar.
+###### ********* MEJORA MPO - TRANSACCIONES CON ROLLBACK: 
+En el proceso de imputar facturas, este controlador asegura si algo falla mientras se guardan los datos, el sistema hace un rollback para cancelar todo y que la base de datos quede con errores o dinero mal imputado o pendiente de imputar.
 
- ####           3.3. GestorController
-                Se ocupa de la seguridad y de que los datos comunes estén disponibles en todas las pantallas.
+##### 3.2.3. GestorController
+Se ocupa de la seguridad y de que los datos comunes estén disponibles en todas las pantallas.
+                
+* **Control de sesión:**
+Guarda quién es el usuario que ha entrado al sistema para saber quién registra un Gasto en caso de añadir uno nuevo. Esta lógica se podría implementar a cada cambio en la BD en un futuro, lo cual facilitaría las auditorías.
 
-                    Control de sesión: Guarda quién es el usuario que ha entrado al sistema para saber quién registra un Gasto en caso de añadir uno nuevo. Esta lógica se podría implementar a cada cambio en la BD en un futuro, lo cual facilitaría las auditorías.
+* **Carga de desplegables:** Para que el usuario no tenga que escribir nombres a mano y cometer errores, este servicio rellena los ComboBox de las pantallas con los datos reales de sociedades y cursos que hay en la BD.
 
-                    Carga de desplegables: Para que el usuario no tenga que escribir nombres a mano y cometer errores, este servicio rellena los ComboBox de las pantallas con los datos reales de sociedades y cursos que hay en la BD.
+### 3.3. controller.vistas: 
+Controladores de las distintas interfaces de usuario y los eventos (JAVAFX).
 
-###        controller.vistas: 
+##### ******** MEJORAS MPO:
 
-            Controladores de las distintas interfaces de usuario y los eventos (JAVAFX).
+Para evitar duplicidad de código, se han creado las siguientes clases estáticas:
 
-******** MEJORAS MPO:
+AvisosUsuario: Centraliza la creación de ventanas de alerta y confirmaciones.
 
-        Para evitar duplicidad de código, se han creado las siguientes clases estáticas:
-
-            AvisosUsuario: Centraliza la creación de ventanas de alerta y confirmaciones.
-
-            NavegacionController: centraliza la lógica de cambio de pantallas de FXML mediante un Enum de rutas, lo que facilita el mantenimiento de la aplicación.
+NavegacionController: centraliza la lógica de cambio de pantallas de FXML mediante un Enum de rutas, lo que facilita el mantenimiento de la aplicación.
+            
