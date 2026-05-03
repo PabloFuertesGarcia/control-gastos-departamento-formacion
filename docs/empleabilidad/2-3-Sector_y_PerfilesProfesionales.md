@@ -59,7 +59,8 @@ Entre sus proyectos se puede encontrar:
 Destaca su unión de los recursos humanos con el análisis de datos avanzado para resolver problemas de negocio de forma estratégica. También su dominio de herramientas técnicas y su trayectoria internacional. Además, resalta su capacidad para comunicar datos de forma clara y su autoridad profesional como docente.
 
 
-## Perfil 2: Javier Valderrama - https://www.linkedin.com/in/jaredvaldron/ - github.com/javaldro
+## Perfil 2: Javier Valderrama -
+ https://www.linkedin.com/in/jaredvaldron/ - github.com/javaldro
 
 Ingeniero de software con un enfoque práctico en proyectos de People Analytics. Es desarrollador senior, con experiencia en la creación de herramientas Open Source que facilitan el análisis de la los RRHH, y enfocado ahora en IA.
 
